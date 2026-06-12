@@ -3,329 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSTechSolutions - Servicios Tecnológicos 2</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script>
-
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de Nosotros - RitchieCorp</title>
-    <!-- Librería Font Awesome para los íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>En Mantenimiento | RSTechSolutions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0b0e14; /* Fondo oscuro espacial */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .contenedor {
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid #00d4ff; /* Borde técnico azul */
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+        h1 { font-size: 3em; color: #00d4ff; margin-bottom: 10px; }
+        p { font-size: 1.2em; line-height: 1.6; color: #cccccc; }
+        .contacto { margin-top: 30px; font-weight: bold; }
+        a { color: #00d4ff; text-decoration: none; }
+    </style>
 </head>
 <body>
-        
 
-    <header>
-        <div style="font-size: 40px; color:#030818 bold;">RSTechSolutions</div>
-        <nav>
-            <button onclick="changePage('inicio')">Inicio</button>
-            <button onclick="changePage('servicios')">Servicios</button>
-            <button onclick="changePage('acerca')">Acerca de</button>
-            <button onclick="changePage('contacto')">Contacto</button>
-            <button onclick="changePage('datos')">Sabias que?</button>
-        </nav>
-    </header>
-
- <div id="banner-movimiento">
-    <div id="banner-contenido" style="margin-left: 50px;">
-        <center>
-        <h2 style="color: #fdfdfd; font-size: 30px;">
-          Expertos en soluciones tecnológicas | Soporte, Mantenimiento y Optimización | ¡Tu tecnología en buenas manos! 🚀  
-        </h2> 
-        </center>
-    </div>
-</div>
-
-    <div id="content-area">
-        
-        <div id="inicio" class="section active">
-    <!-- Contenedor principal que centra todo el bloque -->
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        
-        <img src="Logo 2.png" class="img-fluid" style="width: 900px !important; max-width: 100%; height: auto;" alt="Logo">
-        
-        <h1 style="color: black; font-style: italic;">
-            Bienvenidos a RSTechSolutions
-        </h1> 
-        <h3>
-        <p style="color: #1e2024; font-style: italic; text-align: justify; margin: 20px auto; line-height: 1.6;">
-            Nos especializamos en brindar soluciones tecnológicas confiables, rápidas y profesionales para hogares, negocios y emprendedores. Nuestro compromiso es ayudarte a mantener tus equipos en óptimas condiciones mediante servicios de soporte técnico, mantenimiento preventivo y correctivo, instalación de software, optimización de sistemas y asesoría informática personalizada. Gracias por confiar en nosotros; estamos aquí para convertir la tecnología en una herramienta simple, eficiente y segura para ti. ¡Será un placer ayudarte! 🚀💻🔧
-        </p>
-        <img src="Fondo1.png" class="img-fluid" style="width: 700px !important; max-width: 90%; height: auto;" alt="">
-        </h3>
-       <h3> <p style="color: #b9e713; font-style: italic; text-align: center; margin: 0px auto; line-height: 1.6;">
-            * Consulta nuestros servicios y cotización sin compromiso.*</h3>
-        </p>
-    </div>
-    <div class="redes-container">
-    <div class="iconos-wrapper">
-          <!-- Tu nuevo logo de HP -->
-            <a href="#">
-            <img src="acer.svg" alt="Acer" class="icono-marca-custom">
-        </a>
-          <a href="#">
-            <img src="asus.svg" alt="Asus" class="icono-marca-custom">
-        </a>
-         <a href="#">
-            <img src="dell.svg" alt="DELL" class="icono-marca-custom">
-        </a>
-
-        <a href="#">
-            <img src="hp-logo.svg" alt="HP" class="icono-marca-custom">
-        </a>
-      
-        <a href="#">
-            <img src="lenovo.svg" alt="Lenovo" class="icono-marca-custom">
-        </a>
-        <a href="#">
-            <img src="msi.svg" alt="MSI" class="icono-marca-custom">
-        </a>
-       
-        
-        
-        <!-- Iconos de Font Awesome -->
-          <a href="#"><i class="fa-brands fa-android"></i></a>
-        
-       
-    
-    </div>
-    <p class="texto-redes">Marcas con las que trabajamos.</p>
-</div>
-</div>
-
-
-
-
-  <div id="servicios" class="section">
-   <center><img src="ser1.png" style="width: 700px !important; max-width: 57%; height: auto;" alt="Servicios"> </center> 
-    <div class="contenedor-tarjetas">
-        <div class="tarjeta">
-            <img src="Disco.png" alt="Disco Duro">
-            <h3>Soporte HDD/SSD</h3>
-            <p style="color: #1e2024; font-style: italic; text-align: justify; margin: 20px auto; line-height: 1.6;">Servicio de diagnóstico y mantenimiento para unidades HDD y SSD, incluyendo análisis de salud, revisión de sectores, optimización de rendimiento, monitoreo de temperatura, limpieza de archivos y detección de fallas.</p>
+    <div class="contenedor">
+        <h1>¡Estamos trabajando!</h1>
+        <p>Estamos realizando mejoras técnicas en <strong>RSTechSolutions</strong> para ofrecerte una mejor experiencia.</p>
+        <p>Volveremos a estar en línea muy pronto.</p>
+        <div class="contacto">
+            <p>¿Necesitas ayuda urgente? Escríbenos a: <br>
+            <a href="mailto:rstechsolutions0@gmail.com">rstechsolutions0@gmail.com</a></p>
         </div>
-        
-        <div class="tarjeta">
-            <img src="RAM1.png" alt="RAM">
-            <h3>Optimización RAM</h3>
-            <p style="color: #1e2024; font-style: italic; text-align: justify; margin: 20px auto; line-height: 1.6;">Servicio de análisis, configuración y optimización de memorias RAM, incluyendo compatibilidad, pruebas de estabilidad, configuración de frecuencias y mejora del desempeño del sistema.</p>
-        </div>
-         <div class="tarjeta">
-            <img src="Redes.png" alt="Red">
-            <h3>Instalación de redes</h3>
-            <p style="color: #1e2024; font-style: italic; text-align: justify; margin: 20px auto; line-height: 1.6;">Servicio especializado en instalación, configuración y optimización de redes LAN y Wi-Fi, incluyendo cableado, routers, switches, puntos de acceso y mejora de conectividad.</p>
-        </div>
-
- <div class="tarjeta">
-            <img src="Edicion1.png" alt="Edim1">
-            <h3>Edición de videos e imágenes</h3>
-            <p style="color: #1e2024; font-style: italic; text-align: justify; margin: 20px auto; line-height: 1.6;">Transformamos ideas en contenido visual increíble mediante edición avanzada de video e imágenes. Aplicamos efectos visuales, retoque digital, corrección de color y optimización multimedia para dar un acabado profesional y creativo.</p>
-        </div>
-
- <div class="tarjeta">
-            <img src="Edicion2.png" alt="Ediau">
-            <h3>Descarga, edicion de audio y video </h3>
-            <p style="color: #1e2024; font-style: italic; text-align: justify; margin: 20px auto; line-height: 1.6;">Creamos experiencias audiovisuales impactantes con edición avanzada de audio y video. Optimizamos cada detalle visual y sonoro para producir contenido fluido, profesional y adaptado a redes sociales, empresas, marcas y proyectos personales.</p>
-        </div>
-
-         <div class="tarjeta">
-            <img src="Limpieza.png" alt="Lim">
-            <h3>Limpieza, mantenimiento preventivo y correctivo.</h3>
-            <p style="color: #1e2024; font-style: italic; text-align: justify; margin: 20px auto; line-height: 1.6;">Optimizamos el desempeño de tus equipos mediante mantenimiento inteligente, limpieza profunda y corrección de fallas para mantener máxima eficiencia y estabilidad..</p>
-        </div>
-<div>
-
-    
-
-  
-<div class="tarjeta" >
-    <h3>Servicios Profesionales</h3>
-    
-    <p class="texto-pie-servicios">
-        Ofrecemos diagnóstico profesional, mantenimiento completo y optimización avanzada, siempre con precios razonables y atención cercana. Estamos disponibles para todos.
-    </p>
-</div>
-
-
-
-
-
-</div>
-
-       </div>
-</div>
-        <div id="acerca" class="section">
-                
-     <!-- Banner Principal -->
-    <header class="hero-section">
-        <div style="max-width: 500px; margin: 0 auto; text-align: center;">
-                <center><h1 style="color: rgb(118, 2, 2); " >Acerca de Nosotros</h1></center>
-        <p>Innovando el presente para construir un futuro tecnológico más eficiente, seguro y conectado.</p>
-        </div>
-    
-    </header>
-
-
-    <main class="container">
-        <!-- Sección 1: Historia / Quiénes somos -->
-        <section class="about-grid">
-            <div class="about-text">
-                <h2>¿Quiénes somos?</h2>
-                <p style="color: #1e2024; font-style: italic; text-align: justify; margin: 20px auto; line-height: 1.6;"> 
-En <strong>RSTechSolutions</strong>, no solo reparamos equipos; devolvemos la tranquilidad a hogares y empresas. Sabemos que tu tiempo es valioso y que tu tecnología es el motor de tu productividad. Por eso, nos hemos consolidado como tu aliado estratégico en soporte técnico, ofreciendo soluciones rápidas, transparentes y de vanguardia. Nuestra misión es simple: transformar la complejidad técnica en herramientas eficientes que impulsen tu éxito.</p>
-<p style="color: #1e2024; font-style: italic; text-align: justify; margin: 20px auto; line-height: 1.6;">Nuestro enfoque se basa en la excelencia, la creatividad y el compromiso con cada uno de los retos que asumimos. Creemos firmemente que la tecnología es la herramienta definitiva para superar cualquier barrera.</p>
-            </div>
-            <div class="about-image">
-                <!-- Puedes cambiar esta imagen por una foto de tu equipo, tu oficina o un diseño propio -->
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipo de trabajo en la oficina">
-            </div>
-        </section>
-
-        <!-- Sección 2: Misión y Visión -->
-        <section class="cards-container">
-            <!-- Tarjeta Misión -->
-            <div class="card">
-                <i class="fa-solid fa-bullseye"></i>
-                <h3>Nuestra Misión</h3>
-                <p>Proveer soluciones tecnológicas de la más alta calidad que optimicen los procesos de nuestros usuarios, brindando herramientas intuitivas, seguras y vanguardistas que impulsen su crecimiento diario.</p>
-            </div>
-
-            <!-- Tarjeta Visión -->
-            <div class="card">
-                <i class="fa-solid fa-eye"></i>
-                <h3>Nuestra Visión</h3>
-                <p>Convertirnos en el referente líder en innovación y mantenimiento de tecnológica, asi como en la gestión de proyectos a nivel global, destacando por nuestra capacidad de adaptación, diseño profesional y excelencia tecnologica.</p>
-            </div>
-            
-            <!-- Tarjeta Valores -->
-            <div class="card">
-                <i class="fa-solid fa-handshake-angle"></i>
-                <h3>Nuestros Valores</h3>
-                <p>Nos rigen la <strong>innovación constante</strong>, la <strong>transparencia</strong> en nuestros procesos, la <strong>seguridad</strong> de la información y el <strong>trabajo en equipo</strong> enfocado a resultados.</p>
-            </div>
-        </section>
-    </main>
-       
-</div>
-<section id="datos" class="section">
-<h2 class="titulo-historia" style="text-align: center; color: white; padding-top: 20px;">Informacion interesante sobre terminos, la computadora y sus componentes.</h2>
-
-<div class="contenedor-historia">
-    <div class="tarjeta-historia">
-        <div class="video-container">
-           <iframe width="1349" height="759" src="https://www.youtube.com/embed/1MEvSnoWwc0" title="Historia y evolución de los computadores | TECH Universidad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <h3 style="text-align: center;">Historia de la Computación</h3>
-        <p style="text-align: center;">Breve resumen visual sobre las computadoras y sus generaciones 1.</p>
     </div>
 
-    <div class="tarjeta-historia">
-        <div class="video-container">
-        <iframe width="1349" height="759" src="https://www.youtube.com/embed/wD8yJnIG7gI" title="Historia y Evolución de las Computadoras y sus Generaciones ✅" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-     <h3 style="text-align: center;">Historia de la Computación</h3>
-        <p style="text-align: center;">Breve resumen visual sobre las computadoras y sus generaciones 2.</p>
-    </div>
-
-    <div class="tarjeta-historia">
-        <div class="video-container">
-            <iframe width="1349" height="759" src="https://www.youtube.com/embed/IG-qGZDFjJA" title="El procesador | 2/24 | UPV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <h3>Que es y para que sirve un Procesador</h3>
-        <p>Explicacion de un procesador y su funcionamiento</p>
-   
-    </div>
-       <div class="tarjeta-historia">
-        <div class="video-container">
-            <iframe width="1349" height="759" src="https://www.youtube.com/embed/hRuOMv6dbG8" title="Historia de los MICROPROCESADORES" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <h3>Historia de los microprosesadores</h3>
-        <p>Breve resumen visual sobre los microprocesadores y su funcionamiento</p>
-        
-    </div>
-
-    <div class="tarjeta-historia">
-        <div class="video-container">
-            <iframe width="1349" height="759" src="https://www.youtube.com/embed/de0d9TpM6_w" title="¿Qué es un Bug?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <h3 style="text-align: center;">Sabes que es un "Bug"</h3>
-        <p>Breve resumen visual sobre el termino y de donde surge el termino.</p>
-        
-    </div>
-
-    <div class="tarjeta-historia">
-        <div class="video-container">
-            <iframe width="1349" height="759" src="https://www.youtube.com/embed/bYCDVwyuVt4" title="ADA LOVELACE | Draw My Life (la primera programadora de la Hª)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <h3 style="text-align: center;">Conoces a Ada Lovelace? </h3>
-        <p>Historia de la primer mujer en sentar las bases de la programacion. </p>
-        
-    </div>
-
-
-
-
-
-    
-</div>
-</section>
-
-
-<div id="contacto" class="section">
-     
-            <center><h1 style="color: chocolate; ">Contactanos para brindarte la ayuda que necesitas.</h1></center>
-          
-            <div id="qr-placeholder">
-                <img src="MiVCard2.png" style= position:sticky  alt="prueba">
-                
-        
-            </div>
-            
-       
-    <h2 style="text-align: center;">Llena el siguiente formulario. </h2>
-    <form id="formulario-contacto" action="https://formspree.io/f/mzdqjjzy" method="POST">
-    
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje: "(cuentanos tu problema)"</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-        <button type="submit">Enviar Mensaje</button> 
-        
-        <button type="reset" class="boton-limpiar">Limpiar</button>
-
-        
-
-<p>
-<a href="tel:5647381946" style="text-decoration: none; color: #00d4ff; font-size: 20px; ">
-   <p style="text-align: center; margin-top: 20px;">
-    <a href="https://wa.me/5215541320115" target="_blank" style="text-decoration: none; color: #25d366; font-size: 24px; display: flex; align-items: center; justify-content: center; gap: 10px;">
-        <i class="fa-brands fa-whatsapp"></i> Contáctanos por WhatsApp
-    </a>
-</p>
-</a>
-</p>
-
-<div class="redes-container">
-    <div class="iconos-wrapper">
-        <a href="https://facebook.com/RSTechsolutions01" target="_blank" class="icono-fb"><i class="fa-brands fa-facebook"></i></a>
-    <a href="https://tiktok.com/@rstechcolutions" target="_blank" class="icono-tk"><i class="fa-brands fa-tiktok"></i></a>
-    <a href="https://instagram.com/rstechsolutions0" target="_blank" class="icono-ig"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    <p class="texto-redes">Síguenos en nuestras redes sociales.</p>
-</div>
-
-</div>
-</div>
-
-    </form>
-    </div>
-</div>
 </body>
 </html>
