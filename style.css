@@ -494,3 +494,30 @@ button:hover { background: #0056b3; }
     line-height: 1.6;
     margin: 0;
 }
+/* Esto solo se activa si la pantalla es menor a 768px (celulares) */
+@media (max-width: 768px) {
+    
+    /* 1. Ajustar el menú para que no se amontone */
+    nav ul {
+        flex-direction: column; /* Pone los enlaces uno debajo de otro */
+        gap: 10px;
+    }
+
+    /* 2. Ajustar tus tarjetas de servicios para que ocupen todo el ancho */
+    .tarjeta {
+        width: 90%; /* Ocupa casi todo el ancho de la pantalla del celular */
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    /* 3. Reducir el tamaño de los títulos y textos que se vean gigantes */
+    h2 {
+        font-size: 24px;
+    }
+
+    /* 4. Asegurar que las imágenes no se desborden */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
