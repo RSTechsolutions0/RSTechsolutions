@@ -1,0 +1,496 @@
+/* 1. Estilos generales (esto viene de tu <head>) */
+body, html { 
+    margin: 0; padding: 0; min-height: 100%; 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    /* Cambia esto temporalmente para probar si es el archivo */
+    background-image: url('./Fondo1.png'); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(3, 252, 227, 0.995); 
+}
+
+.contenedor-tarjetas { /* Coloca todas las tarjetas de la seccion de servicios de tres por fila  */
+    display: grid;
+    /* Esto crea 3 columnas de igual tamaño (1fr cada una) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px;
+}
+
+/* IMPORTANTE: Esto asegura que en celulares se vea bien */
+@media (max-width: 1024px) {
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr); /* En tablets pone 2 filas */
+    }
+}
+
+
+.tarjeta {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border: 1px solid #00d4ff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px); /* La tarjeta "salta" un poco al pasar el mouse */
+    background: rgba(2, 140, 253, 0.2);
+}
+
+.tarjeta img {
+    width: 450px; /* Tamaño fijo para todos los iconos */
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+    color: #00d4ff;
+    margin: 10px 0;
+}
+
+
+
+        /* Estilos Generales con Efecto Parallax */
+        body, html { 
+            margin: 0; padding: 0; min-height: 100%; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-image: url('Fondo.png');
+            background-attachment: fixed; /* Esto crea el efecto Parallax */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: rgba(3, 252, 227, 0.995); 
+        }
+        
+        /* Barra de navegación */
+        header { 
+            background: rgba(2, 140, 253, 0.85); 
+            padding: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+            border-bottom: 2px solid #00d4ff;
+        }
+        
+        nav button { 
+            background: none; border: 2; border-color: #ffa600; color: rgb(5, 248, 175); margin: 0 15px; 
+            cursor: pointer; font-size: 18px; font-weight: bold;
+        }
+        nav button:hover { color: #00d4ff; }
+        
+    #banner-movimiento {
+    width: 100%; 
+    height: 250px; /* Ajusta a la altura que quieras */
+    background-image: url('circuitos.png');
+    background-repeat: repeat-x; /* Repite la imagen horizontalmente */
+    background-position: 0 0;
+    overflow: hidden; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    /* Animación del fondo */
+    animation: moverFondo 20s linear infinite;
+}
+
+@keyframes moverFondo {
+    from { background-position: 0 0; }
+    to { background-position: -1920px 0; } /* Ajusta 1920 según el ancho real de tu imagen */
+}
+
+
+
+        /* Contenido Dinámico */
+        #content-area { padding: 40px; background: rgba(31, 0, 49, 0.6); margin: 30px; border-radius: 15px; min-height: 900px; }
+        
+        .section { display: none; }
+        .section.active { display: block; }
+        
+        .img-fluid { max-width: 300px; height: auto; border-radius: 10px; margin: 10px; }
+       
+       
+        #qr-placeholder {  /* esto es lo que hace que el rectangulo azul enmarque al codigo QR */
+    border: 3px dashed #00d4ff; 
+    padding: 40px; /* Reduje el padding de 70px a 20px para que no sea gigante */
+    margin: 20px auto; /* Esto centra el recuadro azul en la página */
+    width: 240px; /* Un tamaño fijo para que el QR respire */
+    
+    /* ESTO ES LO QUE LO CENTRA TODO ADENTRO */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el QR horizontalmente */
+    justify-content: center; /* Centra el QR verticalmente */
+}
+
+    .disco-movil {
+        position: absolute; /* Esto permite moverla libremente */
+        width: 120px !important; 
+        height: auto;
+        
+        /* AQUÍ MUEVES LA IMAGEN (Ajusta estos valores) */
+        top: 300px;  /* Distancia desde arriba del contenedor */
+        left: 400px; /* Distancia desde la izquierda del contenedor */
+        z-index: 10; /* Asegura que esté por encima de otros elementos */
+    }
+       .ram-movil {
+        position: absolute; /* Esto permite moverla libremente */
+        width: 120px !important; 
+        height: auto;
+        /* AQUÍ MUEVES LA IMAGEN (Ajusta estos valores) */
+        top: 450px;  /* Distancia desde arriba del contenedor */
+        left: 400px; /* Distancia desde la izquierda del contenedor */
+        z-index: 10; /* Asegura que esté por encima de otros elementos */
+    }
+        .Red-movil {
+        position: absolute; /* Esto permite moverla libremente */
+        width: 120px !important; 
+        height: auto;
+        
+        /* AQUÍ MUEVES LA IMAGEN (Ajusta estos valores) */
+        top: 550px;  /* Distancia desde arriba del contenedor */
+        left: 400px; /* Distancia desde la izquierda del contenedor */
+        z-index: 10; /* Asegura que esté por encima de otros elementos */
+    }
+            .Edim1-movil {
+        position: absolute; /* Esto permite moverla libremente */
+        width: 120px !important; 
+        height: auto;
+        
+        /* AQUÍ MUEVES LA IMAGEN (Ajusta estos valores) */
+        top: 655px;  /* Distancia desde arriba del contenedor */
+        left: 400px; /* Distancia desde la izquierda del contenedor */
+        z-index: 10; /* Asegura que esté por encima de otros elementos */
+    }
+ .Ediau-movil {
+        position: absolute; /* Esto permite moverla libremente */
+        width: 120px !important; 
+        height: auto;
+        
+        /* AQUÍ MUEVES LA IMAGEN (Ajusta estos valores) */
+        top: 755px;  /* Distancia desde arriba del contenedor */
+        left: 400px; /* Distancia desde la izquierda del contenedor */
+        z-index: 10; /* Asegura que esté por encima de otros elementos */
+    }
+.imagen1-movil {
+        position: absolute; /* Esto permite moverla libremente */
+        width: 350px !important; 
+        height: auto;
+        
+        /* AQUÍ MUEVES LA IMAGEN (Ajusta estos valores) */
+        top: 300px;  /* Distancia desde arriba del contenedor */
+        left: 1300px; /* Distancia desde la izquierda del contenedor */
+        z-index: 10; /* Asegura que esté por encima de otros elementos */
+    }
+.imagen2-movil {
+        position: absolute; /* Esto permite moverla libremente */
+        width: 350px !important; 
+        height: auto;
+        
+        /* AQUÍ MUEVES LA IMAGEN (Ajusta estos valores) */
+        top: 650px;  /* Distancia desde arriba del contenedor */
+        left: 1300px; /* Distancia desde la izquierda del contenedor */
+        z-index: 10; /* Asegura que esté por encima de otros elementos */
+    }
+
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+
+       
+
+        .hero-section h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Contenedor central para el contenido */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* Sección: Quiénes Somos */
+        .about-grid {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            color: #0056b3;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Sección: Misión y Visión (Tarjetas) */
+        .cards-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            flex: 1;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 4px solid #0056b3;
+        }
+
+        /* Efecto al pasar el ratón sobre las tarjetas */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,86,179,0.15);
+        }
+
+        .card i {
+            font-size: 40px;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Diseño responsivo para pantallas pequeñas (Celulares) */
+        @media (max-width: 768px) {
+            .about-grid, .cards-container {
+                flex-direction: column;
+            }
+        }
+
+        #contacto {
+    padding: 40px;
+    background: rgba(31, 0, 49, 0.8); /* Fondo oscuro para que resalte */
+    border-radius: 15px;
+    color: white;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+#formulario-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #00d4ff;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+button {
+    padding: 10px;
+    background: #028cfd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover { background: #0056b3; }
+    
+
+
+
+
+
+.contenedor-historia { /* acomoda las tarjetas de sabias que en orden de 3 por fila*/
+    display: grid;
+    grid-template-columns: repeat(3, 300px); 
+    justify-content: center; 
+    gap: 100px; /* Aumentamos el gap de 30px a 50px para más separación */
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.tarjeta-historia { /* esto de la el color de fondo a las tarjetas de sabias que? */
+    background: #1e122a;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #7000ff;
+    color: white;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.tarjeta-historia:hover { /* le da color a las tajetas al colocar el mouse*/
+    transform: scale(1.05);
+    background: #2a1a3a;
+}
+
+.video-container { /* cre ael contenedor para que los videos no se muevan de su lugar y se ven todos encimados*/
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.contenedor-historia {
+    align-items: stretch; /* Esto hace que todas las tarjetas midan lo mismo de alto */
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center; /* Esto los centra perfectamente horizontalmente */
+    align-items: center;     /* Asegura que estén alineados verticalmente */
+    gap: 40px;               /* Aumenta este número para separar más los iconos */
+    margin-top: 30px;
+}
+
+.redes-container {
+    display: flex;
+    flex-direction: column; /* Esto pone el texto debajo */
+    align-items: center;    /* Esto centra todo horizontalmente */
+    margin-top: 30px;
+}
+
+.iconos-wrapper {
+    display: flex;
+    gap: 50px; /* Espacio entre los iconos */
+    margin-bottom: 10px; /* Espacio entre los iconos y el texto */
+}
+
+.texto-redes {
+    color: white; /* Ajusta el color que necesites */
+    font-size: 18px;
+    margin: 0;
+}
+.iconos-wrapper a {
+    font-size: 50px; /* Cambia este número para el tamaño que desees */
+}
+
+.contenedor-botones {
+    display: flex;
+    gap: 15px; /* Espacio entre los dos botones */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton-limpiar {
+    background-color: #555; /* Un color gris oscuro para diferenciarlo del enviar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-limpiar:hover {
+    background-color: #777; /* Cambia de color al pasar el mouse */
+}
+#qr-placeholder img {
+    /* Ajusta este valor al tamaño que quieras (por ejemplo, 150px) */
+    width: 280px; 
+    height: 280px;
+    
+    /* ESTO ES LO QUE MANTIENE LA CALIDAD */
+    image-rendering: -webkit-optimize-contrast; /* Para navegadores basados en WebKit */
+    image-rendering: pixelated; /* Mantiene los bordes definidos del QR */
+    
+    /* Centrado dentro de su contenedor */
+    display: block;
+    margin: 2 auto;
+}
+
+.icono-marca-custom {
+    width: 45px;          /* Ajusta este tamaño para que coincida con tus otros iconos */
+    height: 45px;
+    filter: brightness(0) invert(1); /* Esto convierte el logo a color blanco puro */
+    transition: transform 0.3s;
+}
+
+.icono-marca-custom:hover {
+    transform: scale(1.1); /* Mantiene el efecto de crecimiento al pasar el mouse */
+}
+
+.tarjeta {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    /* Fondo oscuro semitransparente que combina mejor */
+    background: rgba(0, 0, 0, 0.6); 
+    border: 1px solid #00d4ff; /* Un borde azul brillante para darle el toque técnico */
+    border-radius: 10px;
+}
+
+.texto-pie-servicios {
+    color: #ffffff; /* Texto blanco para que resalte en el fondo oscuro */
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
