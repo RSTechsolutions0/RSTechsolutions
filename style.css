@@ -1,15 +1,5 @@
 /* 1. Estilos generales (esto viene de tu <head>) */
-body, html { 
-    margin: 0; padding: 0; min-height: 100%; 
-    font-family: 'Segoe UI', Arial, sans-serif; 
-    /* Cambia esto temporalmente para probar si es el archivo */
-    background-image: url('./Fondo1.png'); 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: rgba(3, 252, 227, 0.995); 
-}
+
 
 .contenedor-tarjetas { /* Coloca todas las tarjetas de la seccion de servicios de tres por fila  */
     display: grid;
@@ -22,19 +12,11 @@ body, html {
 /* IMPORTANTE: Esto asegura que en celulares se vea bien */
 @media (max-width: 1024px) {
     .contenedor-tarjetas {
-        grid-template-columns: repeat(2, 1fr); /* En tablets pone 2 filas */
+        grid-template-columns: repeat(1, 1fr); /* En tablets pone 2 filas */
     }
 }
 
 
-.tarjeta {
-    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
-    border: 1px solid #00d4ff;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
-}
 
 .tarjeta:hover {
     transform: translateY(-10px); /* La tarjeta "salta" un poco al pasar el mouse */
@@ -382,22 +364,48 @@ button:hover { background: #0056b3; }
     background: #2a1a3a;
 }
 
-.video-container { /* cre ael contenedor para que los videos no se muevan de su lugar y se ven todos encimados*/
-    position: relative;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 15px;
+/* 1. Contenedor Maestro de Videos (Aplica esto al div que engloba los 6 videos) */
+.contenedor-historia { /* O el nombre de tu clase actual */
+    display: grid;
+    /* 3 columnas en pantallas grandes, 1 columna en pantallas pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;          /* Asegura que no toque los bordes del celular */
+    max-width: 1200px;   /* Tamaño máximo en PC */
+    margin: 20px auto;   /* Centrado automático */
+    box-sizing: border-box;
 }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+/* 2. Tarjeta individual de Video */
+.tarjeta-historia {
+    width: 100%;         /* Se ajusta al ancho de la columna del grid */
+    max-width: 400px;    /* Para que no se estiren demasiado en pantallas gigantes */
+    margin: 0 auto;      /* Centra la tarjeta dentro de su columna */
+    background: #1e122a; /* Tu color de fondo */
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
+
+/* 3. Asegurar que el Iframe de YouTube no se desborde */
+.tarjeta-historia iframe {
+    width: 100%;         /* Fuerza al video a medir el 100% de la tarjeta */
+    height: 200px;       /* Altura fija para uniformidad */
+    border: none;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
 .contenedor-historia {
     align-items: stretch; /* Esto hace que todas las tarjetas midan lo mismo de alto */
 }
@@ -494,30 +502,70 @@ button:hover { background: #0056b3; }
     line-height: 1.6;
     margin: 0;
 }
-/* Esto solo se activa si la pantalla es menor a 768px (celulares) */
-@media (max-width: 768px) {
-    
-    /* 1. Ajustar el menú para que no se amontone */
-    nav ul {
-        flex-direction: column; /* Pone los enlaces uno debajo de otro */
-        gap: 10px;
-    }
 
-    /* 2. Ajustar tus tarjetas de servicios para que ocupen todo el ancho */
-    .tarjeta {
-        width: 90%; /* Ocupa casi todo el ancho de la pantalla del celular */
-        margin: 10px auto;
-        padding: 15px;
-    }
-
-    /* 3. Reducir el tamaño de los títulos y textos que se vean gigantes */
-    h2 {
-        font-size: 24px;
-    }
-
-    /* 4. Asegurar que las imágenes no se desborden */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+.servicios-contenedor {
+    display: flex;
+    flex-wrap: wrap;        /* ¡ESTO ES LA CLAVE! Permite que se pasen abajo */
+    justify-content: center; /* Centra las tarjetas si sobra espacio */
+    gap: 20px;              /* Espacio entre tarjetas */
+    padding: 20px;
 }
+
+.tarjeta {  /* tarjetas de servisios funcionando */
+    /* En lugar de width fijo (ej. 400px), usamos flex-basis */
+    flex: 1 1 300px; /* Significa: "Crece, encoje, pero intenta medir 300px base" */
+    max-width: 400px; /* Tamaño máximo para que no se estiren demasiado en PC */
+    margin: 0;        /* Eliminamos márgenes fijos que causan desbordamiento */
+}
+
+.tarjeta img {
+    width: 100%;      /* La imagen nunca puede medir más que su tarjeta */
+    height: auto;     /* Mantiene la proporción para que no se vean estiradas */
+    display: block;   /* Elimina espacios extra abajo */
+}
+
+.iconos-wrapper {
+    display: flex;             /* Activa la flexibilidad */
+    flex-wrap: wrap;           /* Permite que se acomoden en filas si no caben */
+    justify-content: center;   /* Centra los iconos horizontalmente */
+    align-items: center;       /* Centra los iconos verticalmente */
+    gap: 25px;                 /* Espacio entre cada icono */
+    padding: 20px;
+    width: 100%;               /* Ocupa el ancho total del padre */
+    box-sizing: border-box;
+}
+
+.icono-marca-custom {
+    width: 50px;               /* Tamaño fijo para que todos midan igual */
+    height: auto;              /* Mantiene la proporción */
+    filter: brightness(0) invert(1); /* Los pone blancos para que resalten */
+    transition: transform 0.3s;
+}
+
+.icono-marca-custom:hover {
+    transform: scale(1.2);     /* Efecto de crecimiento al pasar el mouse */
+}
+
+/* 1. Ajuste del contenedor del QR (el recuadro punteado) */
+#qr-placeholder {
+    width: 90%;            /* En lugar de 240px, ocupa el 90% del espacio disponible */
+    max-width: 300px;      /* Pero no dejes que crezca más de 300px en PC */
+    margin: 20px auto;     /* Centrado automático */
+    padding: 20px;         /* Espacio interno equilibrado */
+    box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;      /* Por si algo se sale, lo corta */
+}
+
+/* 2. Ajuste de la imagen del QR dentro del contenedor */
+#qr-placeholder img {
+    width: 100%;           /* Obliga a la imagen a medir exactamente lo que mide el contenedor */
+    height: auto;          /* Mantiene la forma cuadrada perfectamente */
+    max-width: 100%;       /* Nunca superará el tamaño de su padre */
+    display: block;
+    image-rendering: pixelated; /* Mantiene los bordes definidos */
+}
+
+
