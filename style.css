@@ -40,7 +40,7 @@
         body, html { 
             margin: 0; padding: 0; min-height: 100%; 
             font-family: 'Segoe UI', Arial, sans-serif; 
-            background-image: url('madera\ 2.png');
+            background-image: url('madera2.png');
             background-attachment: fixed; /* Esto crea el efecto Parallax */
             background-position: center;
             background-repeat: no-repeat;
