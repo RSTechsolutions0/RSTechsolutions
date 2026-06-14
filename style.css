@@ -40,7 +40,7 @@
         body, html { 
             margin: 0; padding: 0; min-height: 100%; 
             font-family: 'Segoe UI', Arial, sans-serif; 
-            background-image: url('Fondo.png');
+            background-image: url('madera\ 2.png');
             background-attachment: fixed; /* Esto crea el efecto Parallax */
             background-position: center;
             background-repeat: no-repeat;
@@ -180,20 +180,6 @@
         z-index: 10; /* Asegura que esté por encima de otros elementos */
     }
 
-        /* Estilos generales */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            margin-top: 0;
-        }
-
        
 
         .hero-section h1 {
@@ -299,6 +285,7 @@
                 flex-direction: column;
             }
         }
+   
 
         #contacto {
     padding: 40px;
@@ -568,4 +555,6 @@ button:hover { background: #0056b3; }
     image-rendering: pixelated; /* Mantiene los bordes definidos */
 }
 
-
+.navbar-container {
+    background: linear-gradient(80deg, #ffffff, #3d4849, #6b6969);
+}
